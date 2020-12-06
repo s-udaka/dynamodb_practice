@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  dynamodb-local:
+    image: amazon/dynamodb-local:latest
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./db_data:/home/dynamodblocal/data
+    command: -jar DynamoDBLocal.jar -sharedDb -dbPath ./data -optimizeDbBeforeStartup
+    environment:
+      AWS_ACCESS_KEY_ID: dummyid
+      AWS_SECRET_ACCESS_KEY: dummysec
+      AWS_DEFAULT_REGION: ap-northeast-1
+      AWS_DEFAULT_OUTPUT: json
+
+volumes:
+  dynamodb-local:
+    driver: local

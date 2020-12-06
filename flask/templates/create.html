@@ -1,0 +1,24 @@
+<!DOCTIME html>
+<html lang="ja">
+<title>新規作成画面</title>
+<head>
+    <meta charset="utf-8">
+    <title>新規作成画面</title>
+</head>
+<body>
+    <form action="/comp" method="POST">
+        <p>ユーザーID<br>
+        <input type="text" name="userid" placeholder="userid"></p>
+        <p>ユーザー名<br>
+            <input type="text" name="username" placeholder="username"></p>
+        <p>パスワード<br>
+        <input type="text" name="password" placeholder="password"></p>
+        <p>一言<br>
+        <input type="text" name="message" placeholder="こんにちは"></p>
+        <button type="submit">ユーザー作成する</button>
+    </form>
+    <form action="/" method="GET">
+        <button type="submit">トップ画面へ戻る</button>
+    </form>
+</body>
+</html>

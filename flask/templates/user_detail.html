@@ -1,0 +1,16 @@
+<!DOCTIME html>
+<html lang="ja">
+<title>ユーザー詳細画面</title>
+<head>
+    <meta charset="utf-8">
+    <title>ユーザー詳細画面</title>
+</head>
+<body>
+    <p>ようこそ {{ username }} さん</p>
+    <p>ユーザーID：{{ userid }}</p>
+    <p>{{ message }}</p>
+    <form action="/logout" method="GET">
+        <button type="submit">ログアウト</button>
+    </form>
+</body>
+</html>
